@@ -1,0 +1,61 @@
+# ゲーム基本設定
+game:
+  max_speed: 540  # km/h
+  display_max_speed: 230  # km/h
+  min_speed: 10  # km/h
+  car_acceleration: 0.3
+  car_brake: 0.5
+  car_deceleration: 0.1
+
+# 道路設定
+road:
+  width: 30
+  length: 200
+  curve_speed: 0.002
+  curve_change_probability: 0.01
+  curve_max_angle: 0.02
+
+# 環境設定
+environment:
+  change_interval: 1000
+  locations:
+    city:
+      - 新宿区
+      - 渋谷区
+      - 港区
+      - 千代田区
+      - 中央区
+    sea:
+      - 湘南海岸
+      - 江ノ島
+      - 鎌倉海岸
+      - 逗子海岸
+      - 葉山海岸
+    forest:
+      - 奥多摩
+      - 高尾山
+      - 多摩川
+      - 青梅
+      - 八王子
+    mountain:
+      - 富士山
+      - 高尾山
+      - 筑波山
+      - 箱根山
+      - 丹沢山
+
+# 坂道設定
+slopes:
+  - time: 10
+    acceleration: 5
+  - time: 20
+    acceleration: 5
+  - time: 30
+    acceleration: 0
+  - time: 40
+    acceleration: -10
+
+# 表示設定
+display:
+  location_change_distance: 1  # km
+  location_display_time: 1000    # ms 

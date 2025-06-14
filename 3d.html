@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ミニマル ドライブ (3D)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- three.jsのCDNを読み込む -->
+    <script async src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"></script>
+
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://unpkg.com/three@0.158.0/build/three.module.js",
+          "three/addons/": "https://unpkg.com/three@0.158.0/examples/jsm/"
+        }
+      }
+    </script>
+
+    <div class="ui">
+        <div>スコア: <span id="score">0</span></div>
+        <div>時速: <span id="speed">0</span>km/h</div>
+    </div>
+    
+    <div class="controls">
+        <div class="control-btn" id="leftBtn">←</div>
+        <div class="control-btn" id="rightBtn">→</div>
+    </div>
+    
+    <div class="game-over" id="gameOver">
+        <h2>ゲーム終了</h2>
+        <div>最終スコア: <span id="finalScore">0</span></div>
+        <button class="restart-btn" onclick="restartGame()">もう一度</button>
+    </div>
+
+    <div class="location-name" id="locationName"></div>
+
+    <!-- ゲーム音楽用オーディオ要素を追加 -->
+    <audio id="gameMusic" src="game_music.mp3" loop preload="auto"></audio>
+
+    <!-- 効果音用オーディオ要素を追加 -->
+    <audio id="brakeSound" src="brake.mp3" preload="auto"></audio>
+    <audio id="speedupSound" src="speedup.mp3" preload="auto"></audio>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"></script>
+    <script type="module" src="script.js"></script>
+</body>
+</html>
